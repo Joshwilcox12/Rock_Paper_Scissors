@@ -12,4 +12,18 @@ function getComputerChoice(){
 }
 
 
-console.log(getComputerChoice())
+function getHumanChoice(){
+  let humanChoice = prompt("Choose Rock, Paper, Scissors: ");
+ 
+    if (humanChoice.toLowerCase() === 'rock')
+        return 'rock';
+    else if (humanChoice.toLowerCase() === 'paper')
+        return 'paper';
+    else if (humanChoice.toLowerCase() === ' scissors')
+        return 'scissors';
+    else
+    return 'Invalid, please restart.'
+    // getHumanChoice();
+ }
+
+console.log(getHumanChoice())
