@@ -1,5 +1,5 @@
-const humanScore = 0;
-const computerScore = 0;
+let humanScore = 0;
+let computerScore = 0;
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
 
@@ -36,36 +36,45 @@ function getComputerChoice(){
  // Logic to play a single round of game
 function playRound(humanChoice, computerChoice){
   if(humanChoice === 'rock' && computerChoice === 'scissor'){
-    return "You win! Rock beats scissor!"
+    ++humanScore;
+    return "You win! Rock beats scissor!";
+    
   }
   else if(humanChoice === 'rock' && computerChoice ==='paper'){
-    return "You lose! paper beats rock!"
+    ++computerScore;
+    return "You lose! paper beats rock!";
+    
   }
   else if(humanChoice === 'rock' && computerChoice ==='rock'){
-    return "It's a draw"
+    return "It's a draw";
   }
   else if(humanChoice === 'paper' && computerChoice === 'rock'){
-    return "You win! Paper beats rock!"
+    ++humanScore;
+    return "You win! Paper beats rock!";
   }
   else if(humanChoice === 'paper' && computerChoice === 'scissor'){
-    return "You lose! Scissor beats paper!"
+    ++computerScore;
+    return "You lose! Scissor beats paper!";
   }
   else if(humanChoice === 'paper' && computerChoice ==='paper'){
-    return "It's a draw"
+    return "It's a draw";
   }
   else if(humanChoice === 'scissor' && computerChoice === 'paper'){
-    return "You win! Scissor beats paper!"
+    ++humanScore;
+    return "You win! Scissor beats paper!";
   }
   else if(humanChoice === 'scissor' && computerChoice === 'rock'){
-    return "You lose! Rock beats Scissor!"
+    ++computerScore;
+    return "You lose! Rock beats Scissor!";
   }
   else if(humanChoice === 'scissor' && computerChoice ==='scissor'){
-    return "It's a draw"
+    return "It's a draw";
   }
 }
 
 console.log(playRound(humanSelection, computerSelection))
-
+console.log(humanScore)
+console.log(computerScore)
 
 
 
