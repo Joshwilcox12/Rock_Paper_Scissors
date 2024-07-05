@@ -5,14 +5,14 @@ const computerSelection = getComputerChoice();
 
 // Get human choice 
 function getHumanChoice(){
-  let humanChoice = prompt("Choose Rock, Paper, Scissors: ");
+  let humanChoice = prompt("Choose Rock, Paper, Scissor: ");
  
     if (humanChoice.toLowerCase() === 'rock')
         return 'rock';
     else if (humanChoice.toLowerCase() === 'paper')
         return 'paper';
-    else if (humanChoice.toLowerCase() === 'scissors')
-        return 'scissors';
+    else if (humanChoice.toLowerCase() === 'scissor')
+        return 'scissor';
     else
     return 'Invalid, please restart.'
     // getHumanChoice();
@@ -28,15 +28,15 @@ function getComputerChoice(){
   else if (randomNumber > 33 && randomNumber <= 66){
     return 'paper'
   }
-  else {
-    return 'scissors'
+  else if (randomNumber > 66){
+    return 'scissor'
   }
 }
 
  // Logic to play a single round of game
 function playRound(humanChoice, computerChoice){
-  if(humanChoice === 'rock' && computerChoice === 'scissors'){
-    return "You win! Rock beats scissors!"
+  if(humanChoice === 'rock' && computerChoice === 'scissor'){
+    return "You win! Rock beats scissor!"
   }
   else if(humanChoice === 'rock' && computerChoice ==='paper'){
     return "You lose! paper beats rock!"
@@ -47,19 +47,19 @@ function playRound(humanChoice, computerChoice){
   else if(humanChoice === 'paper' && computerChoice === 'rock'){
     return "You win! Paper beats rock!"
   }
-  else if(humanChoice === 'paper' && computerChoice === 'scissors'){
-    return "You lose! Scissors beats paper!"
+  else if(humanChoice === 'paper' && computerChoice === 'scissor'){
+    return "You lose! Scissor beats paper!"
   }
   else if(humanChoice === 'paper' && computerChoice ==='paper'){
     return "It's a draw"
   }
-  else if(humanChoice === 'scissors' && computerChoice === 'paper'){
+  else if(humanChoice === 'scissor' && computerChoice === 'paper'){
     return "You win! Scissor beats paper!"
   }
-  else if(humanChoice = 'scissors' && computerChoice === 'rock'){
+  else if(humanChoice === 'scissor' && computerChoice === 'rock'){
     return "You lose! Rock beats Scissor!"
   }
-  else if(humanChoice === 'scissors' && computerChoice ==='scissors'){
+  else if(humanChoice === 'scissor' && computerChoice ==='scissor'){
     return "It's a draw"
   }
 }
